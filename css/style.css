@@ -23,7 +23,8 @@ header{
 input,label{
     flex-basis: 1;
 }
-h1{
+h1,h2,h3,h4{
+    margin: 0;
     text-align: center;
     text-wrap: balance;
 }
@@ -48,17 +49,26 @@ h1{
 }
 .botones {
     margin-top: 20px;
+    
 }
 .btn{
-    margin: 0 20px;
+    margin: 10px 20px;
 }
 /*tablero*/
+
 .juego{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 60vw;
     background-color: aquamarine;
+    align-content: center;
+    justify-items: center;
+}
+.juego-inicio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .tablero {
     height: 30vw;
@@ -70,24 +80,89 @@ h1{
     padding: 0px;
 }
 /*estadistica*/
+.estadistica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.estadistica h3{
+    margin-top: 20px;
+    flex: 1;
+}
 .componentes{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.turno{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border:1px solid #000;
+    flex: 2;
 }
 
+.turno span{
+    padding: 10px 0;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: #333;
+    flex: 2;
+    font-size: 30pt;
+}
 /*cronometro*/
 .cronometro{
+    margin-top: 10px;
+    border: 1px solid #000;
     display: flex;
+    justify-content: space-evenly;
+    font-size: 40pt;
+    padding: 10px;
+    flex: 2;
 }
 /*movimientos*/
 .movimientos{
     display: flex;
     gap: 20px;
+    margin: 10px 0 20px 0;
+    flex: 2;
+
+}
+/*estado de la partidad*/
+.estado{
+    
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+
+}
+/*Histroial*/
+.historial{
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 60vw;
+    display: column;
+}
+.historial-jugadores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.ganador,.perdedor{
+    background-color: #aaa;
+    width: 40%;
 }
 
-
-@media screen and (max-width:480px) {
+@media screen and (max-width:800px) {
     header{
         width: 80vw;
     }
@@ -108,6 +183,16 @@ h1{
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(3,1fr);
     }
-    
+    .historial-jugadores{
+    flex-direction: column;
+    }
+    .ganador,.perdedor{
+    background-color: #aaa;
+    width: 80%;
+    }
+    .componentes{
+        flex-direction: column;
+        align-items: center;
+    }
 }
-/*
+

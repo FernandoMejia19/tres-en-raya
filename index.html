@@ -11,37 +11,44 @@
         <h1> Juego de TRES EN RAYA</h1>
         <section class="formulario">
             <div class="form_jugador">
-                <span>Jugador 1</span><br>
-                <label for="jugador1">Nombre :</label>
-                <input type="text" />
+                <span>Jugador X</span><br>
+                <label for="jugadorX">Nombre :</label>
+                <input type="text" id="jugadorX"/>
             </div>
             <div class="form_jugador">
-                <span>Jugador 2</span><br>
-                <label for="jugador2">Nombre :</label>
-                <input type="text"/>
+                <span>Jugador O</span><br>
+                <label for="jugadorO">Nombre :</label>
+                <input type="text" id="jugadorO"/>
             </div>
         </section>
         <div class="botones">
                 <span>Quien empieza?</span>
-                <button class="btn" id="empiezaJ1">Jugador 1</button>
-                <button class="btn" id="empiezaJ2">Jugador 2</button>
+                <button class="btn" id="empiezaX">Jugador X</button>
+                <button class="btn" id="empiezaO">Jugador O</button>
         </div>
     </header>
     <section class="juego">
-        <p> Introduce los nombres para empezar</p>
+        <div class="juego-inicio">
+            <p> Introduce los nombres para empezar</p>
+            <button class="btn" id="empezar">Empezar</button>
+        </div>
         <section class="componentes">
             <div class="tablero">
-                <button id="celda1"></button>
-                <button id="celda2"></button>
-                <button id="celda3"></button>
-                <button id="celda4"></button>
-                <button id="celda5"></button>
-                <button id="celda6"></button>
-                <button id="celda7"></button>
-                <button id="celda8"></button>
-                <button id="celda9"></button>
+                <button id="celda1" disabled></button>
+                <button id="celda2" disabled></button>
+                <button id="celda3" disabled></button>
+                <button id="celda4" disabled></button>
+                <button id="celda5" disabled></button>
+                <button id="celda6" disabled></button>
+                <button id="celda7" disabled></button>
+                <button id="celda8" disabled></button>
+                <button id="celda9" disabled></button>
             </div>
             <div class="estadistica">
+                <div class="turno">
+                    <h3>Le toca a:</h3>
+                    <span id="turno-jugador">X</span>
+                </div>
                 <h3>Tiempo transcurrido:</h3>
                 <div class="cronometro">
                     <div class="cronometro-tiempo" id="minutos">00</div>
@@ -50,19 +57,38 @@
                 </div>
                 <h3>Numero de movimientos</h3>
                 <div class="movimientos">
-                    <div class="movimientos-x"> X :</div>
-                    <div class="movimientos-0"> O : </div>
+                    <div class="movimientos-x"> X : <span id="conteo-x">0</span> movimientos</div>
+                    <div class="movimientos-0"> O : <span id="conteo-o">0</span> movimientos</div>
                 </div>
+            </div>
+            <div class="estado">
+                <span class="partida-estado">Partida en Curso</span>
+                <button id="revancha">Revancha</button>
+                <button id="partida-nueva">Nueva partida</button>
             </div>
         </section>
     </section>
     <section class="historial">
-
+        <h2>Historial de partidas</h2>
+        <div class="historial-partida">
+            <div class="historial-jugadores">
+                <h4>Ganador</h4>
+                <div class="ganador">
+                    
+                    <span id="jugador-ganador">jugador X</span>
+                    
+                </div>
+                <h4>Perdedor</h4>
+                <div class="perdedor">
+                    <span id="jugador-perdedor">jugador O</span>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
 
         <div>asdfasdf</div>
     </footer>
-    
+    <script src="js/game.js"></script>
 </body>
 </html>
