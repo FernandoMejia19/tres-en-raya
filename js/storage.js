@@ -75,11 +75,11 @@ function crearDivPartida(partida, indice) {
     
     if (partida.resultado === 'Empate') {
         htmlJugadores = `
-            <h4>Empate</h4>
+            <h3>Empate</h3>
             <div class="ganador">
                 <span>${partida.nombreX} (X)</span>
             </div>
-            <h4>Empate</h4>
+            <h3>Empate</h3>
             <div class="perdedor">
                 <span>${partida.nombreO} (O)</span>
             </div>

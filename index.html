@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juego de Tres en Raya.">
     <link rel="stylesheet" href="/css/style.css">
     <title>Juego tres en raya</title>
 </head>
@@ -34,19 +35,19 @@
         </div>
         <section class="componentes">
             <div class="tablero">
-                <button id="celda1" disabled></button>
-                <button id="celda2" disabled></button>
-                <button id="celda3" disabled></button>
-                <button id="celda4" disabled></button>
-                <button id="celda5" disabled></button>
-                <button id="celda6" disabled></button>
-                <button id="celda7" disabled></button>
-                <button id="celda8" disabled></button>
-                <button id="celda9" disabled></button>
-            </div>
+            <button id="celda1" disabled aria-label="Casilla 1, esquina superior izquierda, vacía"></button>
+            <button id="celda2" disabled aria-label="Casilla 2, superior centro, vacía"></button>
+            <button id="celda3" disabled aria-label="Casilla 3, esquina superior derecha, vacía"></button>
+            <button id="celda4" disabled aria-label="Casilla 4, centro izquierda, vacía"></button>
+            <button id="celda5" disabled aria-label="Casilla 5, centro, vacía"></button>
+            <button id="celda6" disabled aria-label="Casilla 6, centro derecha, vacía"></button>
+            <button id="celda7" disabled aria-label="Casilla 7, esquina inferior izquierda, vacía"></button>
+            <button id="celda8" disabled aria-label="Casilla 8, inferior centro, vacía"></button>
+            <button id="celda9" disabled aria-label="Casilla 9, esquina inferior derecha, vacía"></button>
+        </div>
             <div class="estadistica">
                 <div class="turno">
-                    <h3>Le toca a:</h3>
+                    <h2>Le toca a:</h2>
                     <span id="turno-jugador">X</span>
                 </div>
                 <h3>Tiempo transcurrido:</h3>
@@ -63,8 +64,8 @@
             </div>
             <div class="estado">
                 <span class="partida-estado">Partida en Curso</span>
-                <button id="revancha">Revancha</button>
-                <button id="partida-nueva">Nueva partida</button>
+                <button class="btn" id="revancha" disabled>Revancha</button>
+                <button class="btn" id="partida-nueva">Nueva partida</button>
             </div>
         </section>
     </section>
@@ -72,16 +73,6 @@
         <h2>Historial de partidas</h2>
         <div class="historial-partida">
             <div class="historial-jugadores">
-                <h4>Ganador</h4>
-                <div class="ganador">
-                    
-                    <span id="jugador-ganador">jugador X</span>
-                    
-                </div>
-                <h4>Perdedor</h4>
-                <div class="perdedor">
-                    <span id="jugador-perdedor">jugador O</span>
-                </div>
             </div>
         </div>
     </section>

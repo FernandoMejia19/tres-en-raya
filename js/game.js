@@ -104,6 +104,7 @@ celda9.addEventListener('click',function(){
 /*botones */
 btnEmpezar.addEventListener('click',function(){
     if((nombreX.value.trim()=='') || (nombreO.value.trim()=='')){
+        alert("Se deben ingresar los dos nombres primero");
         console.log("no hay nombres xd");
     }else{
         empezarJuego();
@@ -120,6 +121,7 @@ btnRevancha.addEventListener('click',function(){
 } );
 btnNuevaPartida.addEventListener('click',function(){
     iniciarNuevaPartida();
+    alert("Ingresar de nuevo los nombres");
 } );
 
 /*funciones */
@@ -215,8 +217,11 @@ function verificarPartida() {
     
     if (revisarGanador(celdasX)) {
         ganador = 'X';
+        alert("Gano el jugadorX "+jugadorX);
     } else if (revisarGanador(celdasO)) {
         ganador = 'O';
+    }else if(movimientos===9){
+        alert("Empate :(");
     }
     let empate = (movimientos === 9 && !ganador);
     if (ganador || empate) {
@@ -244,6 +249,7 @@ function verificarPartida() {
         };
         guardarPartida(datosJuego);
     }
+    btnRevancha.disabled=false;
 };
 
 function iniciarRevancha() {
